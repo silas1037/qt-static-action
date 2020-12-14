@@ -18,7 +18,7 @@ jobs:
     - name: Install jom
       run: |
         #Invoke-WebRequest https://www.dropbox.com/s/dku543gtw7ik7hr/jom.zip?dl=1 -OutFile .\jom.zip
-        #expand-archive -path "jom.zip"
+        expand-archive -path "jom.zip"
         echo "D:\a\qt-static-action\qt-static-action\jom" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - name: Compile static Qt version
       run: |
