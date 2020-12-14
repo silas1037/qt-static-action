@@ -27,7 +27,7 @@ jobs:
         cd ..
         git clone https://code.qt.io/qt/qt5.git -b 5.15.2
         cd qt5
-        perl init-repository -f --module-subset=qtbase,qtcharts,qtsvg,qt3d,qtwebengine
+        perl init-repository -f --module-subset=qtbase,qtcharts,qtsvg,qt3d,qtwebengine,webenginewidgets,webchannel
         # Create shadow build folder
         cd ..
         mkdir qt5_shadow
