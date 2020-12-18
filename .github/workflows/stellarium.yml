@@ -15,6 +15,7 @@ jobs:
         Xvfb :10 -ac -screen 0 1024x768x24 &
         export DISPLAY=":10"
         wget https://github.com/Stellarium/stellarium-data/releases/download/weekly-snapshot/Stellarium-0.20.3-3d1f6f2ae9-x86_64.AppImage
+        chmod -x Stellarium-0.20.3-3d1f6f2ae9-x86_64.AppImage
         Stellarium-0.20.3-3d1f6f2ae9-x86_64.AppImage  --screenshot-dir screenshots --startup-script $PWD/screencapture.ssc
         ls ~/Pictures/Stellarium -R
     - uses: actions/upload-artifact@v1
