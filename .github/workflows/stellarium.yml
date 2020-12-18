@@ -1,7 +1,10 @@
+
+#https://www.rasukarusan.com/entry/2018/12/03/002434
+
 name: Stellarium Capture
 
 on:
-  push:
+  # push:
   workflow_dispatch:
 
 jobs:
