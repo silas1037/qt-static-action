@@ -18,8 +18,8 @@ jobs:
         architecture: 'x64'
     - name: Install jom
       run: |
-        Invoke-WebRequest https://www.dropbox.com/s/dku543gtw7ik7hr/jom.zip?dl=1 -OutFile .\jom.zip
-        expand-archive -path "jom.zip"
+        #Invoke-WebRequest https://www.dropbox.com/s/dku543gtw7ik7hr/jom.zip?dl=1 -OutFile .\jom.zip
+        #expand-archive -path "jom.zip"
         echo "D:\a\qt-static-action\qt-static-action\jom" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - name: Compile static Qt version
       run: |
@@ -27,7 +27,7 @@ jobs:
         cd ..
         git clone https://code.qt.io/qt/qt5.git -b 5.15.2
         cd qt5
-        perl init-repository -f --module-subset=qtbase,qtcharts,qtsvg,qt3d,qtwebengine,qtwebchannel,qtwebsockets,qtwebview
+        perl init-repository -f --module-subset=qt3d,qtactiveqt,qtandroidextras,qtbase,qtcanvas3d,qtcharts,qtconnectivity,qtdatavis3d,qtdeclarative,qtdoc,qtdocgallery,qtfeedback,qtgamepad,qtgraphicaleffects,qtimageformats,qtlocation,qtlottie,qtmacextras,qtmultimedia,qtnetworkauth,qtpim,qtpurchasing,qtqa,qtquick3d,qtquickcontrols,qtquickcontrols2,qtquicktimeline,qtremoteobjects,qtrepotools,qtscript,qtscxml,qtsensors,qtserialbus,qtserialport,qtspeech,qtsvg,qtsystems,qttools,qttranslations,qtvirtualkeyboard,qtwayland,qtwebchannel,qtwebengine,qtwebglplugin,qtwebsockets,qtwebview,qtwinextras,qtx11extras,qtxmlpatterns
         # Create shadow build folder
         cd ..
         mkdir qt5_shadow
